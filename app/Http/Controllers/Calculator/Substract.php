@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Calculator;
 
 use App\Http\Interfaces\CalculatorInterface;

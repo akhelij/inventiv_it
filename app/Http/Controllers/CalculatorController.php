@@ -18,18 +18,19 @@ class CalculatorController extends Controller
         $calculator = CalculatorFactory::build($operation);
 
         $result = $this->calculateResult($request->value1, $request->value2, $operation, $calculator);
-        
+
         return response()->json([
             'result' => $result,
         ], 200);
     }
 
-    private function calculateResult($value1, $value2, $operation, $calculator) {
-        if($value1 == 0 && in_array($operation, ['divide', 'multiply'])) {
+    private function calculateResult($value1, $value2, $operation, $calculator)
+    {
+        if ($value1 == 0 && in_array($operation, ['divide', 'multiply'])) {
             return 0;
-        } elseif($operation == 'divide' && $value2 == 0) {
+        } elseif ($operation == 'divide' && $value2 == 0) {
             return 'Error: Division by zero';
-        } elseif($value1 == 0) {
+        } elseif ($value1 == 0) {
             return $value2;
         } else {
             return $calculator->calculate($value1, $value2);

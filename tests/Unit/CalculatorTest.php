@@ -11,7 +11,7 @@ class CalculatorTest extends TestCase
     {
         $result = CalculatorFactory::build('add')->calculate(2, 2);
 
-        $this->assertEquals($result,4);
+        $this->assertEquals($result, 4);
     }
 
     public function test_substraction()
@@ -25,13 +25,13 @@ class CalculatorTest extends TestCase
     {
         $result = CalculatorFactory::build('divide')->calculate(2, 2);
 
-        $this->assertEquals($result,1);
+        $this->assertEquals($result, 1);
     }
 
     public function test_multiple()
     {
         $result = CalculatorFactory::build('multiply')->calculate(2, 2);
 
-        $this->assertEquals($result,4);
+        $this->assertEquals($result, 4);
     }
 }
