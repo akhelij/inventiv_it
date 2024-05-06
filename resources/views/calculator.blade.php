@@ -89,7 +89,6 @@
                     this.value2 += number.toString();
                 },
                 appendOperator(operation) {
-                    console.log(this.operators[operation])
                     this.operation = operation;
                     if(this.result == '') {
                         this.result = this.value2;
